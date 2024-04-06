@@ -2,9 +2,9 @@ tasks:
   - before: |
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+      rvm install "ruby-3.2.2"
       sudo apt-get install -q -y libunwind-dev
-      DFXVM_INIT_YES=1 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      DFXVM_INIT_YES=1 sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"    
+  - init: |
       source "$HOME/.local/share/dfx/env"
-      rvm install "ruby-3.2.2
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)" 
-  - init: yarn && yarn web build:production
+      yarn && yarn web build:production
