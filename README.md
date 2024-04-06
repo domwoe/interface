@@ -4,6 +4,43 @@
 
 An open source repository for all Uniswap front end interfaces maintained by Uniswap Labs. Uniswap is a protocol for decentralized exchange of Ethereum tokens.
 
+## 🚀 Deploying on ICP
+
+Add a `dfx.json` config file:
+
+```bash
+touch dfx.json
+```
+
+Add the following content to the `dfx.json` file:
+
+```json
+{
+  "canisters": {
+    "interface": {
+      "frontend": {
+        "entrypoint": "apps/web/build/index.html"
+      },
+      "source": ["apps/web/build"],
+      "type": "assets"
+    }
+  },
+  "version": 1
+}
+```
+
+Build the web app:
+
+```bash
+yarn web build:production
+```
+
+Deploy the web app:
+
+```bash
+dfx deploy --playground
+```
+
 ## Interfaces
 
 - Web: [app.uniswap.org](https://app.uniswap.org)
