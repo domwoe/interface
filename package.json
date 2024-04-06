@@ -81,6 +81,7 @@
     "lightweight-charts@4.1.1": "patch:lightweight-charts@npm%3A4.1.1#./.yarn/patches/lightweight-charts-npm-4.1.1-01f161d9b6.patch"
   },
   "scripts": {
+    "build": "",
     "g:build": "turbo run build --concurrency=100%",
     "g:check:deps:usage": " depcheck && turbo run check:deps:usage",
     "g:check:deps:mismatch": "manypkg check",
