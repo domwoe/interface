@@ -1,5 +1,5 @@
 tasks:
-    - before: | 
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-      yarn
-      yarn web build:production
+  - before: |
+    sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)" 
+    rvm install "ruby-3.2.2
+  - init: yarn && yarn web build:production
