@@ -1,0 +1,5 @@
+tasks:
+    - before: | 
+      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      yarn
+      yarn web build:production
